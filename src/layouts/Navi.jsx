@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 export default function Navi() {
     const [isAuthenticated, setIsAuthenticated] = useState(true)
     let navigate  = useNavigate();
+
     function handleSignOut() {
         setIsAuthenticated(false)
         navigate("/")
@@ -17,6 +18,7 @@ export default function Navi() {
     function handleSignIn() {
         setIsAuthenticated(true)
     }
+    
     return (
         <div>
             <Menu inverted fixed='top'>
